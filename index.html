@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat - estilo WhatsApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- ENTRY OVERLAY (nome + foto obrigatória) -->
+    <div id="entryOverlay" class="entry-overlay" aria-modal="true" role="dialog">
+      <form id="entryForm" class="entry-card">
+        <h2>Bem-vindo</h2>
+
+        <label class="avatar-picker" for="avatarInput" title="Escolher foto">
+          <input id="avatarInput" type="file" accept="image/*" />
+          <img id="avatarPreview" class="avatar-preview" alt="Prévia do avatar" />
+          <div id="avatarPlaceholder" class="avatar-placeholder">+</div>
+        </label>
+
+        <input id="nameInput" type="text" placeholder="Seu nome" required maxlength="30" />
+
+        <button id="enterBtn" class="btn primary" type="submit" disabled>Entrar</button>
+
+        <p class="entry-note">A foto é obrigatória para entrar.</p>
+      </form>
+    </div>
+
+    <!-- CHAT UI -->
+    <header class="chat-header">
+      <div class="header-left">
+        <div id="headerAvatar" class="header-avatar" aria-hidden="true"></div>
+        <div class="chat-info">
+          <div id="headerName" class="chat-title">DUsApp</div>
+          <div id="headerStatus" class="chat-subtitle">Conectando...</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="changeProfile" class="btn small" title="Alterar perfil">Editar</button>
+      </div>
+    </header>
+
+    <main id="chat" class="chat">
+      <ul id="messages" class="messages" aria-live="polite"></ul>
+    </main>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <div class="input-row">
+        <input id="messageInput" class="message-input" placeholder="Digite uma mensagem" maxlength="1000" />
+        <button id="sendBtn" class="btn send" type="submit">Enviar</button>
+      </div>
+    </form>
+
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

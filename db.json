@@ -1,0 +1,17 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "nome": "Administrador",
+        "sobrenome": "Sistema",
+        "cpf": "00000000000",
+        "email": "admin@site.com",
+        "senha": "admin123",
+        "rua": "Rua Central, 1",
+        "cep": "00000-000",
+        "cidade": "Cidade",
+        "estado": "Estado",
+        "telefone": "0000-0000"
+      }
+    ]
+  }
